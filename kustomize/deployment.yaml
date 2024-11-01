@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: lyoshab/podinfo:6.7.1 # {"$imagepolicy": "flux-system:my-podinfo-image-policy"}
+        image: lyoshab/podinfo:6.7.2 # {"$imagepolicy": "flux-system:my-podinfo-image-policy"}
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
@@ -73,8 +73,8 @@ spec:
             cpu: 100m
             memory: 64Mi
         volumeMounts:
-          - name: data
-            mountPath: /data
-      volumes:
         - name: data
-          emptyDir: {}
+          mountPath: /data
+      volumes:
+      - name: data
+        emptyDir: {}
