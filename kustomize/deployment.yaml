@@ -23,7 +23,7 @@ spec:
     spec:
       containers:
       - name: podinfod
-        image: lyoshab/podinfo:6.7.1
+        image: lyoshab/podinfo:6.7.1 # {"$imagepolicy": "flux-system:my-podinfo-image-policy"}
         imagePullPolicy: IfNotPresent
         ports:
         - name: http
